@@ -95,18 +95,17 @@ function toggleServiceInfo(){
 	node.style.display = node.style.display == 'none' ? '' : 'none';
 }
 
-function updateServiceInfo(){
-	xhrGet(REST_ENV, function(dbinfo){
+function updateServiceInfo() {
+	xhrGet(REST_ENV, function(dbinfo) {
 
-				console.log(dbinfo);
-				document.getElementById('envServiceName').innerHTML = dbinfo.name;
-				document.getElementById('envDbName').innerHTML = dbinfo.db;
-				document.getElementById('envHost').innerHTML = dbinfo.host;
-				document.getElementById('envPort').innerHTML = dbinfo.port;
-				document.getElementById('envUrl').innerHTML = dbinfo.jdbcurl;
+		console.log(dbinfo);
+		document.getElementById('envServiceName').innerHTML = dbinfo.name;
+		document.getElementById('envDbName').innerHTML = dbinfo.db;
+		document.getElementById('envHost').innerHTML = dbinfo.host;
+		document.getElementById('envPort').innerHTML = dbinfo.port;
+		// document.getElementById('envUrl').innerHTML = dbinfo.jdbcurl;
 
-
-	}, function(err){
+	}, function(err) {
 		console.error(err);
 	});
 }
