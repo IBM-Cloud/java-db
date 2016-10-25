@@ -30,7 +30,7 @@ and place it in `$LIBERTY_HOME/wlp/usr/shared/resources/mysql`. If `mysql` direc
 		<fileset dir="${shared.resource.dir}/mysql" includes="*.jar"/>
 	</library>
 ```
-1) Run `mvn install` and copy the `target/JavaDBApp.war`
+1) Run `mvn install` and copy the `target/JavaDBApp.war` to `$LIBERTY_HOME/usr/servers/defaultServer/dropins`
 
 ## Decomposition
 **API - JAX-RS Resource**
